@@ -17,7 +17,7 @@
          if (getGenderFromName($maleOrFemale['fullname']) == $gender) $maleOrFemale = null;
       } while ($maleOrFemale == null);
       //Процент совместимости «Идеально на ...» — случайное число от 50% до 100% с точностью два знака после запятой.
-      $rand = random_int(5000, 10000) / 100;
+      $rand = round(random_int(5000, 10000) / 100, 2);
       echo getShortName($fullname) . ' + ' . getShortName($maleOrFemale['fullname']) . ' = ' . '<br>';
       echo "♡ Идеально на " . $rand . "% ♡" . '<br>';;
    }
